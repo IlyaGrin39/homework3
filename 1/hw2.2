@@ -1,0 +1,16 @@
+def rain_message(number):
+    if number == 1:
+        return "Пошел дождь. Возьмите зонтик!"
+    elif number == 0:
+        return "Дождя нет!"
+    else:
+        return f"Неверный ввод: {number}"
+
+user_input = input()
+
+try:
+    user_input = int(user_input)
+except ValueError:
+    print("Неверный ввод")
+else:
+    print(rain_message(user_input))
